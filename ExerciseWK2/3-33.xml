@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="my-style.css"?>
+
 
     <programme>
         <degree> MSc </degree>
         <year>2015/16</year>
-        <results>
-            <distinction>
+        <results>Distinction
                 <name>Jemima Puddle-Duck</name>
                 <name>Peter Rabbit</name>
-            </distinction>
-            <merit>
+        </results>
+        <results> Merit
                 <name>Tom Kitten</name>
-            </merit>
-            <pass></pass>
-            <fail>Samuel Whiskers</fail>
+        </results>
+        <results> Fail
+                <name>Samuel Whiskers</name>
         </results>
     </programme>
