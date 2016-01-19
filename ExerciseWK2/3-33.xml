@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+    <programme>
+        <degree> MSc </degree>
+        <year>2015/16</year>
+        <results>
+            <distinction>
+                <name>Jemima Puddle-Duck</name>
+                <name>Peter Rabbit</name>
+            </distinction>
+            <merit>
+                <name>Tom Kitten</name>
+            </merit>
+            <pass></pass>
+            <fail>Samuel Whiskers</fail>
+        </results>
+    </programme>
