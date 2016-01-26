@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <Stock>
+        <new-car>
+            <model>Ford</model>
+            <price>12000</price>
+        </new-car>
+        <used-car>
+            <model>Mercedes</model>
+            <mileage>50000</mileage>
+            <price>15000</price>
+        </used-car>
+    </Stock>
