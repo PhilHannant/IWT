@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Stock [
+<!ELEMENT Stock ((new-car)?, (used-car)?)>
+<!ELEMENT new-car (model, price)>
+<!ELEMENT used-car  (model, mileage, price, condition?)>
+<!ELEMENT model   (#PCDATA)>
+<!ELEMENT mileage  (#PCDATA)>
+<!ELEMENT price   (#PCDATA)>
+<!ELEMENT conditon  (#PCDATA)>
+]>
+
+
+
+
     <Stock>
         <new-car>
             <model>Ford</model>
