@@ -8,5 +8,6 @@
             <model>Mercedes</model>
             <mileage>50000</mileage>
             <price>15000</price>
+            <condition>good</condition>
         </used-car>
     </Stock>
