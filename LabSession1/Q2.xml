@@ -2,8 +2,8 @@
 <!DOCTYPE football-results [
 <!ELEMENT football-results (date, league, match+)>
 <!ELEMENT match (score, home-team, away-team)>
-<!ELEMENT home-team (name, goal?)>
-<!ELEMENT away-team (name, goal?)>
+<!ELEMENT home-team (name, goal*)>
+<!ELEMENT away-team (name, goal*)>
 <!ELEMENT goal (time, scorer)>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT league (#PCDATA)>
@@ -34,5 +34,39 @@ own-goal (true|false) #IMPLIED>
             <name>Everton</name>
         </away-team>
     </match>
+    <match>
+        <score>3-3</score>
+        <home-team>
+            <name>Liverpoor</name>
+            <goal penalty= "true" own-goal="false">
+                <time>34</time>
+                <scorer>Rush</scorer>
+            </goal>
+            <goal penalty= "false" own-goal="false">
+                <time>56</time>
+                <scorer>Rush</scorer>
+            </goal>
+            <goal penalty= "false" own-goal="false">
+                <time>89</time>
+                <scorer>Rush</scorer>
+            </goal>
+        </home-team>
+        <away-team>
+            <name>Manchester United</name>
+            <goal penalty= "false" own-goal="false">
+                <time>14</time>
+                <scorer>Cantona</scorer>
+            </goal>
+            <goal penalty= "false" own-goal="false">
+                <time>23</time>
+                <scorer>Hughes</scorer>
+            </goal>
+            <goal penalty= "false" own-goal="false">
+                <time>78</time>
+                <scorer>Giggs</scorer>
+            </goal>
+        </away-team>
+    </match>
+
 </football-results>
 
