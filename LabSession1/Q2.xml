@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE football-results [
+<!ELEMENT football-results(date, league, match+)>
+<!ELEMENT match (score, home-team, away-team)>
+<!ELEMENT home-team (name, goal?)>
+<!ELEMENT away-team (name, goal?)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT league (#PCDATA)>
+<!ELEMENT score (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
 
+<!ATTLIST goal
+ scorer
+
+]>
 <football-results>
     <date>Saturday 21st February</date>
     <league>Premier League</league>
