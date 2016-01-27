@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <programme> MSc
-    <teaches course="Java" lecturer="Dr. No"/>
-    <teaches course="C++" lecturer="A Smith"/>
+    <teaches>
+        <course>Java</course>
+        <lecturer>Dr. No</lecturer>
+    <teaches>
+        <course>C++</course>
+        <lecturer>A Smith</lecturer>
+    </teaches>
 </programme>
+
