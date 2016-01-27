@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE football-results [
-<!ELEMENT football-results(date, league, match+)>
+<!ELEMENT football-results (date, league, match+)>
 <!ELEMENT match (score, home-team, away-team)>
 <!ELEMENT home-team (name, goal?)>
 <!ELEMENT away-team (name, goal?)>
+<!ELEMENT goal (time, scorer)>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT league (#PCDATA)>
 <!ELEMENT score (#PCDATA)>
 <!ELEMENT name (#PCDATA)>
-<!ELEMENT goal (scorer, time)>
 <!ELEMENT scorer (#PCDATA)>
 <!ELEMENT time (#PCDATA)>
 
-        <!ATTLIST goal
- scorer PCDATA)>
+<!ATTLIST goal
+penalty (true|false) #IMPLIED
+own-goal (true|false) #IMPLIED>
+
 
 ]>
 <football-results>
@@ -23,11 +25,13 @@
         <score>1-0</score>
         <home-team>
             <name>Tottenham</name>
-            <goal scorer="Kane" time="34" penalty= "false" own-goal="false"/>
+            <goal penalty= "false" own-goal="false">
+                <time>34</time>
+                <scorer>Kane</scorer>
+            </goal>
         </home-team>
         <away-team>
             <name>Everton</name>
-            <goal/>
         </away-team>
     </match>
 </football-results>
