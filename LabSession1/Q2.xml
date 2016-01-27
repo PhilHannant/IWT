@@ -1,1 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<football-results>
+    <score>1-0</score>
+    <home-team> Tottenham
+        <goal scorer="Kane" time="34"/>
+        <penalty/>
+        <own-goal/>
+    </home-team>
+    <away-team> Everton
+        <goal/>
+        <penalty/>
+        <own-goal/>
+    </away-team>
+</football-results>
