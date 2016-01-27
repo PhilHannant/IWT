@@ -8,9 +8,12 @@
 <!ELEMENT league (#PCDATA)>
 <!ELEMENT score (#PCDATA)>
 <!ELEMENT name (#PCDATA)>
+<!ELEMENT goal (scorer, time)>
+<!ELEMENT scorer (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
 
-<!ATTLIST goal
- scorer
+        <!ATTLIST goal
+ scorer PCDATA)>
 
 ]>
 <football-results>
