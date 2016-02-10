@@ -5,9 +5,11 @@
     <xsl:template match="/proceedings">
         <h1><xsl:value-of select="name"/></h1>
         <p>
+
          <xsl:for-each select="contents/article/title">
-               <xsl:value-of select="."/>
+             <body>"<xsl:value-of select="."/>"</body><br/>
           </xsl:for-each>
+
         </p>
     </xsl:template>
 
