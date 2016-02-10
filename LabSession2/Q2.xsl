@@ -7,7 +7,7 @@
         <p>
 
          <xsl:for-each select="contents/article/title">
-             <body>"<xsl:value-of select="."/>"</body><br/>
+             <body>"<xsl:value-of select="."/>"</body>
           </xsl:for-each>
 
         </p>
