@@ -5,7 +5,7 @@
 
 
 <xsl:template match="/">
-<table border="1">
+<table>
     <tr>
         <th>Year</th>
         <th>Category</th>
