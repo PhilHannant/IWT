@@ -9,41 +9,35 @@
 </head>
 <body>
 
-<form>
+<form id="userInput">
     <label for="Year">Year</label>
     <input type="text" name="Year"/>
-    <select>
+    <select name="options" form="userInput">
         <option value="equal">Equal</option>
         <option value="contains">Contains</option>
         <option value="any">Any</option>
     </select>
     <label for="Category">Category</label>
     <input type="text" name="Category"/>
-    <select>
+    <select name="options" form="userInput">
         <option value="equal">Equal</option>
         <option value="contains">Contains</option>
         <option value="any">Any</option>
     </select>
     <label for="Nominee">Nominee</label>
     <input type="text" name="Nominee"/>
-    <select>
+    <select name="options" form="userInput">
         <option value="equal">Equal</option>
         <option value="contains">Contains</option>
         <option value="any">Any</option>
     </select>
-    <button type="button" name="Submit">Submit</button>
+    <input type="button" onclick="getInput()" value="Submit">
 </form>
 
-<!--<script type="text/javascript">-->
-    <!--var xmlDoc = getXML("oscars.xml");-->
-    <!--var stylesheet = getXML("oscarsStylesheet.xsl");-->
-    <!--if (typeof (XSLTProcessor) != "undefined") {-->
-        <!--var processor = new XSLTProcessor();-->
-        <!--processor.importStylesheet(stylesheet);-->
-        <!--var result = processor.transformToFragment(xmlDoc, document);-->
-        <!--document.getElementById("target3").appendChild(result);-->
-    <!--} else-->
-        <!--window.alert("Your browser does not support the XSLTProcessor object");-->
-<!--</script>-->
+
+<script type="text/javascript">
+</script>
+
+
 </body>
 </html>
