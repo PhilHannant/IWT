@@ -1,14 +1,14 @@
 /**
  * Created by philhannant on 05/03/2016.
  */
-/*function getXML(url) {
+function getXML(url) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, false);
     xhr.send(null);
     return xhr.responseXML;
 }
 
-
+/*
 function getYCN(string){
     var xmlDoc = getXML("oscars.xml");
 
@@ -67,7 +67,19 @@ function searchXML() {
 
 $(document).ready(function(){
     $('#userInput').submit(function(){
-        var values = $(this).serialize();
-        alert(values);
+
+        $("p").append("<b>Appended text</b>");
+
+
     });
 });
+/*
+
+ var values = $(this).serialize();
+ alert(values);
+var xmlDoc = getXML("oscars.xml");
+$(xmlDoc).find("Year")
+    .each(function() {
+        document.resultArea.append(
+            $(this).text());
+    });*/
