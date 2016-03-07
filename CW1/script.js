@@ -80,7 +80,38 @@ $(document).ready(function() {
         $('#resultArea').append(" <b>Appended text</b>.");
     });
 });
+
+
+
+function getInput(year, yearOp, cat, catOp, nom, nomOp) {
+
+    var xmlDoc = getXML("oscars.xml");
+    var stylesheet = getXML("oscarsStylesheet.xsl");
+    $(stylesheet).find("xsl\\:value-of, value-of").first().attr("select",year);
+    if (typeof (XSLTProcessor) != "undefined") {
+        var proc = new XSLTProcessor();
+        proc.importStylesheet(stylesheet);
+        var resultFragment = proc.transformToFragment(xmlDoc, document);
+        document.getElementById("resultArea").appendChild(resultFragment);
+    } else {
+        window.alert("Your browser does not support the XSLTProcessor object");
+
+        //alert(year + yearOp + cat + catOp + nom + nomOp);
+    }
+
+}
+
+
+
+
 /*
+
+
+ <!--
+
+ }
+ // -->
+
 
  var values = $(this).serialize();
  alert(values);

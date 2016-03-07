@@ -13,26 +13,28 @@
 <form id="userInput">
     <label for="Year">Year</label>
     <input type="text" name="Year"/>
-    <select name="options" form="userInput">
+    <select name="option1" form="userInput">
         <option value="equal">Equal</option>
         <option value="contains">Contains</option>
         <option value="any">Any</option>
     </select>
     <label for="Category">Category</label>
     <input type="text" name="Category"/>
-    <select name="options" form="userInput">
+    <select name="option2" form="userInput">
         <option value="equal">Equal</option>
         <option value="contains">Contains</option>
         <option value="any">Any</option>
     </select>
     <label for="Nominee">Nominee</label>
     <input type="text" name="Nominee"/>
-    <select name="options" form="userInput">
+    <select name="option3" form="userInput">
         <option value="equal">Equal</option>
         <option value="contains">Contains</option>
         <option value="any">Any</option>
     </select>
-    <input type="submit" value="Submit">
+    <input type="button" value="submit" onclick="getInput(Year.value, option1.value,
+     Category.value, option2.value, Nominee.value, option3.value)"/>
+    <!--<input type="submit" value="Submit">-->
 </form>
 <p>dd</p>
 
