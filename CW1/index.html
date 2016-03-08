@@ -32,8 +32,7 @@
         <option value="contains">Contains</option>
         <option value="any">Any</option>
     </select>
-    <input type="button" value="submit" onclick="getInput(Year.value, option1.value,
-     Category.value, option2.value, Nominee.value, option3.value)"/>
+    <input type="button" value="submit" onclick="test()"/>
     <!--<input type="submit" value="Submit">-->
 </form>
 <p>dd</p>
@@ -44,5 +43,36 @@
 <div id="resultArea">
 
 </div>
+
+<!--<script>-->
+    <!--function getInput(year) {-->
+
+        <!--var input = 'Oscars/' + "[Nomination/Year='" + year + "']";-->
+        <!--var xmlDoc = getXML("oscars.xml");-->
+        <!--var stylesheet = getXML("oscarsStylesheet.xsl");-->
+        <!--$(stylesheet).find("xsl\\:for-each, for-each")-->
+                <!--.first()-->
+                <!--.attr("select", "Year");-->
+
+            <!--var processor = new XSLTProcessor();-->
+            <!--processor.importStylesheet(xmlDoc);-->
+            <!--var result = processor.transformToFragment(xmlDoc, document);-->
+            <!--alert(document.getElementById(xmlDoc.valueOf()));-->
+            <!--document.getElementById("resultArea").appendChild(result);-->
+
+
+
+
+
+
+    <!--}-->
+    <!--function getXML(url) {-->
+        <!--var xhr = new XMLHttpRequest();-->
+        <!--xhr.open("GET", url, false);-->
+        <!--xhr.send(null);-->
+        <!--return xhr.responseXML;-->
+    <!--}-->
+
+<!--</script>-->
 </body>
 </html>

@@ -7,8 +7,8 @@ function getXML(url) {
     xhr.send(null);
     return xhr.responseXML;
 }
-
 /*
+
 function getYCN(string){
     var xmlDoc = getXML("oscars.xml");
 
@@ -83,16 +83,22 @@ $(document).ready(function() {
 
 
 
-function getInput(year, yearOp, cat, catOp, nom, nomOp) {
+function getInput(year) {
 
+    var input = 'Oscars/' + "[Nomination/Year='" + year + "']";
     var xmlDoc = getXML("oscars.xml");
     var stylesheet = getXML("oscarsStylesheet.xsl");
-    $(stylesheet).find("xsl\\:value-of, value-of").first().attr("select",year);
+    $(stylesheet).find("xsl\\:for-each, for-each")
+        .first()
+        .attr("select", "Oscars");
+
+
     if (typeof (XSLTProcessor) != "undefined") {
-        var proc = new XSLTProcessor();
-        proc.importStylesheet(stylesheet);
-        var resultFragment = proc.transformToFragment(xmlDoc, document);
+        var processor = new XSLTProcessor();
+        processor.importStylesheet(stylesheet);
+        var resultFragment = processor.transformToFragment(xmlDoc, document);
         document.getElementById("resultArea").appendChild(resultFragment);
+
     } else {
         window.alert("Your browser does not support the XSLTProcessor object");
 
@@ -100,6 +106,15 @@ function getInput(year, yearOp, cat, catOp, nom, nomOp) {
     }
 
 }
+
+function test(){
+    var xmlDoc = getXML("oscars.xml");
+    var titleElements = xmlDoc.getElementsByTagName("Year[");
+    for ( i = 0; i < titleElements.length; i++ )
+        document.write("<tr><td>",
+            titleElements[i].firstChild.nodeValue, "</td></tr>");
+}
+
 
 
 
