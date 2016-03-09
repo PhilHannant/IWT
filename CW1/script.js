@@ -1,10 +1,9 @@
-/**
- * Created by philhannant on 05/03/2016.
- */
-function getXML(url) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, false);
-    xhr.send(null);
+function getXML(myUrl) {
+    var xhr = $.ajax({
+        url:      myUrl,
+        datatype: "xml",
+        async:    false
+    });
     return xhr.responseXML;
 }
 /*
@@ -90,7 +89,7 @@ function getInput(year) {
     var stylesheet = getXML("oscarsStylesheet.xsl");
     $(stylesheet).find("xsl\\:for-each, for-each")
         .first()
-        .attr("select", "Oscars");
+        .attr("select", "/Oscars/Nomination[@Year='2010 (83rd)']");
 
 
     if (typeof (XSLTProcessor) != "undefined") {
@@ -109,13 +108,31 @@ function getInput(year) {
 
 function test(){
     var xmlDoc = getXML("oscars.xml");
-    var titleElements = xmlDoc.getElementsByTagName("Year[");
-    for ( i = 0; i < titleElements.length; i++ )
-        document.write("<tr><td>",
-            titleElements[i].firstChild.nodeValue, "</td></tr>");
+    $(xmlDoc).find("//Year")
+        .each(function() {
+            document.write("<tr><td>",
+                $(this).text(),
+                "</td></tr>");
+        });
 }
 
+function letsSee(){
 
+    var xmlDoc = getXML("oscars.xml");
+    var stylesheet = getXML("oscarsStyleSheet.xsl");
+    $(stylesheet).find("xsl\\:value-of, value-of").first().attr("select","/Oscars/Nomination/Year");
+    if (typeof (XSLTProcessor) != "undefined") {
+        var proc = new XSLTProcessor();
+        proc.importStylesheet(stylesheet);
+        var resultFragment = proc.transformToFragment(xmlDoc, document);
+        document.getElementById("resultArea").appendChild(resultFragment);
+    } else {
+        window.alert("Your browser does not support the XSLTProcessor object");
+    }
+
+
+
+}
 
 
 
